@@ -1,8 +1,13 @@
-import React from 'react';
-import { CiHeart } from "react-icons/ci";
+import React, { useState } from 'react';
+import { FaHeart } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
-
+    const [isLiked, setIsLiked] = useState(false);
+    
+    const handleLikeToggle = (e) => {
+        e.stopPropagation(); 
+        setIsLiked(prev => !prev);
+    };
     return (
         <div className="product-card">
             <img 
@@ -10,10 +15,11 @@ const ProductCard = ({ product }) => {
                 alt={product.title}
                 className='product-img'
             />
-            <button className="wishlist-btn" style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', cursor: 'pointer' }}>
-                 <CiHeart 
+            <button className="wishlist-btn" style={{ position: 'absolute', top: '10px', right: '10px', background: 'transparent', border: 'none', cursor: 'pointer' }}>
+                 <FaHeart 
                     size={24} // A slightly larger size for visibility
-                    color="#000" // Black color
+                    color={isLiked ? 'red': 'grey'}
+                    onClick={handleLikeToggle}
                 />
             </button>
             

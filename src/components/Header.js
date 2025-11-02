@@ -5,9 +5,11 @@ import  Logo from '../assests/Logo.png';
 
 const Header = () => (
     <header className="header">
-        {/* 1. TOP BAR */}
+        
         <div className="header-top-bar">
-            <span>Lorem ipsum dolor</span>
+            <span className='banner'>Lorem ipsum dolor</span>
+            <span className='banner'>Lorem ipsum dolor</span>
+            <span className='banner'>Lorem ipsum dolor</span>
         </div>
         
         <div className='header-main'>

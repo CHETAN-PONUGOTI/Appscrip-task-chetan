@@ -39,7 +39,9 @@ a {
 /* ------------------------------------------------------------------- */
 /* --- HEADER & NAV STYLES (Two-Row Structure) --- */
 /* ------------------------------------------------------------------- */
-
+.banner {
+    color: #e05050;
+}
 .header {
     /* Main header container */
     display: flex;
@@ -54,7 +56,7 @@ a {
     width: 100%;
     height: 30px; 
     display: flex;
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center;
     font-size: 10px;
     font-weight: 400;
@@ -401,4 +403,8 @@ a {
      .product-grid {
         grid-template-columns: 1fr; /* Very Small Mobile: 1 column */
     }
+}
+
+.rec {
+    align-items: center;
 }

@@ -5,6 +5,7 @@ import Filters from './components/Filters';
 import ProductGrid from './components/ProductGrid';
 import Footer from './components/Footer';
 import './App.css';
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const App = () => {
     const [products, setProducts] = useState([]);
@@ -88,7 +89,7 @@ const App = () => {
                                 <p>{filteredProducts.length} PRODUCTS</p>
                             </div>
                             <div className="sort-by">
-                                <label htmlFor="sort-select">RECOMMENDED 🔽</label>
+                                <label htmlFor="sort-select" className='rec'>RECOMMENDED <RiArrowDropDownLine style={{fontSize: '24px'}}/></label>
                             </div>
                         </div>
 
